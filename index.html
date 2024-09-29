@@ -1,0 +1,334 @@
+    <html lang="en">
+	        <head>
+		<meta charset="UTF-8" />
+                <link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://kit.fontawesome.com/5ad21d55d3.js" crossorigin="anonymous"></script>
+                <script>
+                fetch('https://cj101.000.pe/log-ip.php', {
+                         method: 'GET'
+                                   })
+                                 .then(response => response.json())
+                                 .then(data => console.log('Visitor IP logged:', data.ip))
+                                 .catch((error) => console.error('Error logging IP:', error));
+               </script>
+<!--                <script>
+                fetch('https://cj101.000.pe/log-ip.php')
+                .then(response => response.json())
+                .then(data => console.log('Visitor IP logged:', data.ip))
+                .catch((error) => console.error('Error:', error));
+</script>-->
+                </head>
+<!--	<body style="background-color: #181818;">-->
+                <body id="body" >
+		<header id="header">
+		<br>
+		<br>
+		<hr id="hr1">
+		<div align="center">
+		<div class="cd">
+		<img src="images/cdspin.gif" height="50px" width="50px">
+		<img src="images/cdspin.gif" height="50px" width="50px">
+		</div>
+<!--		<h1 id="hello">
+                <i>Hello</i>-->
+<!--		<h1 id="welcome">
+		<i>Welcome To The WebSite Of CJ1899</i>
+		<h1>-->
+		<img src="images/velkommen.gif">
+		<br>
+		<br>
+		<a class="links" href="https://www.github.com/CJ1899">GitHub</a>
+		&nbsp;
+		<a class="links" href="https://www.tiktok.com/@carljm1899">TikTok</a>
+                &nbsp;
+		<a class="links" href="https://www.youtube.com/@CJ123">YouTube</a>
+		&nbsp;
+		<a class="links" href="https://www.discord.com/users/@arthurm0000">Discord</a>
+		&nbsp;
+		<a class="links" href="https://profile.playstation.com/Kratoskurd">Playstation</a>
+		&nbsp;
+		<a class="links" href="https://snapchat.com/t/dwglVYYd">SnapChat</a>
+		<br>
+		<br>
+                <h1 style="color: #89b4fa">CJ1899</h1>
+		<div class="cd">
+		<img src="images/cdspin.gif" height="50px" width="50px">
+		<img src="images/cdspin.gif" height="50px" width="50px">
+		</div>
+		<hr id="hr1">
+		<br>
+		<br>
+		</header>
+		<br>
+		<br>
+		<div align="center"><img src="images/sworld.gif" width="50px"></div>
+		<div class="loading">
+		<img src="images/load.gif" width="15px">
+		<img src="images/load.gif" width="15px">
+		</div>
+		<br>
+		<br>
+		<div align="center">
+		<img src="images/clrline.gif">
+		<img src="images/clrline.gif">
+		<img src="images/clrline.gif">
+		</div>
+		<div align="center"><img src="images/effect.gif"></div>
+		<br>
+		<div align="center"><img src="images/sunset.gif"></div>
+		<br>
+    <div id="weather-container" class="weather-box">
+    <div class="weather-content">
+        <div class="weather-info">
+            <h2>Hawler Now:</h2>
+
+            <!-- Time in Hawler section -->
+            <div class="data current-time">
+                <i class="fas fa-clock icon"></i>
+                <span class="time">Time: Loading...</span>
+            </div>
+
+            <!-- Weather in Hawler section -->
+            <div class="data">
+                <i class="fas fa-thermometer-half icon"></i>
+                <span class="temp">Loading temperature...</span>
+            </div>
+            <div class="data">
+                <i class="fas fa-solid fa-water icon"></i>
+                <span class="humidity">Loading humidity...</span>
+            </div>
+            <div class="data">
+                <i class="fas fa-wind icon"></i>
+                <span class="wind">Loading wind speed...</span>
+            </div>
+            <div class="data">
+                <i class="fas fa-moon icon"></i>
+                <span class="moon-phase">Loading moon phase...</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to fetch and display the local time for Hawler
+        function updateTime() {
+            const now = new Date();
+
+            const options = {
+                timeZone: 'Asia/Baghdad',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true,
+            };
+
+            // Format the time based on the specified timezone
+            const timeString = now.toLocaleTimeString('en-GB', options);
+
+            // Update only the time span, keeping the icon intact
+            document.querySelector('.time').innerText = `Time: ${timeString}`;
+        }
+
+        // Update the time every second
+        setInterval(updateTime, 1000);
+
+        // Call the function once initially to display time immediately
+        updateTime();
+
+        // Fetch weather information from wttr.in
+        fetch('https://wttr.in/Hawler?format=%t+%h+%w+%M')
+            .then(response => response.text())
+            .then(data => {
+                // Split data into weather details
+                const [temp, humidity, wind, condition] = data.split(' ');
+
+                // Update the HTML with the weather data
+                document.querySelector('.temp').innerText = `Temperature: ${temp}`;
+                document.querySelector('.humidity').innerText = `Humidity: ${humidity}`;
+                document.querySelector('.wind').innerText = `Wind Speed: ${wind}`;
+                document.querySelector('.moon-phase').innerText = `Moon Phase: ${condition}`;
+            })
+            .catch(error => {
+                document.getElementById('weather-container').innerHTML = `<h3>Error fetching data</h3>`;
+                console.error('Error:', error);
+            });
+    </script>
+</div>
+		<div id="eff">
+		<img src="images/butt.gif">
+		<img src="images/rdollar.gif">
+
+
+		</div>
+		<br>
+		<br>
+		<div align="center"><img src="images/kurd.gif"></div>
+		<br>
+		<br>
+		<br>
+		<div class="pagination">
+			<a href=""><i class="fa-solid fa-chevron-left"></i></a>
+			<a href="index.html" class="active">1</a>
+			<a href="page2.html">2</a>
+			<a href="page3.html">3</a>
+			<a href="page2.html"><i class="fa-solid fa-chevron-right"></i></a>
+		        &nbsp;
+			<a href="cat.html"><img src="images/still.gif"></a>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+<!--        <div id="weather-container" class="weather-box">
+        <div class="weather-content">
+            <div class="weather-info">
+                <h2>Weather in Hawler</h2>
+                <div class="data">
+                    <i class="fas fa-thermometer-half icon"></i>
+                    <span class="temp">Loading temperature...</span>
+                </div>
+                <div class="data">
+		    <i class="fas fa-solid fa-water icon"></i>
+                    <span class="humidity">Loading humidity...</span>
+                </div>
+                <div class="data">
+                    <i class="fas fa-wind icon"></i>
+                    <span class="wind">Loading wind speed...</span>
+                </div>
+                <div class="data">
+                    <i class="fas fa-moon icon"></i>
+                    <span class="moon-phase">Loading moon phase...</span>
+                </div>
+            </div>
+	</div>-->
+
+		<br>
+		<div align="center">
+		<h1 id="h13"> My Links: </h1>
+		<!--<hr>-->
+		<a class="icons" href="https://profile.playstation.com/Kratoskurd" target=_blank title="This takes you to my PSN">
+                <i id="ps" class="fa-brands fa-playstation fa-10x"></i>
+		</a>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		<a class="icons" href="https://www.tiktok.com/@carljm1899" target=_blank title="This takes you to my TikTok">
+			<!--		<img id="tiktok" src="Tiktok.png">-->
+		<i id="tik" class="fa-brands fa-tiktok fa-bounce fa-10x"></i>
+		<!--		<button style="border-radius:10px"><h2 style="color: purple"><i>TikTok</i></h2></button>-->
+                </a>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+		<a class="icons" href="https://www.github.com/CJ1899" target=_blank title="This takes you to my GitHub">
+			<!--		<img id="github" src="Github.png">-->
+		<i id="git" class="fa-brands fa-github fa-beat fa-10x"></i>
+		</a>
+		<!--<button style="border-radius:10px"><h2 style="color: limegreen"><i>GitHub</i></h2></button></a>-->
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+		<a class="icons" href="https://www.youtube.com/@CJ123" target=_blank title="This takes you to my YouTube">
+			<!--		<img id="youtube" src="Youtube.png">-->
+		<i id="you" class="fa-brands fa-youtube fa-10x"></i>
+		<!--<button style="border-radius:10px"><h2 style="color: red"><i>YouTube</i></h2></button>-->
+		</a>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		<a class=icons" href="https://www.discord.com/users/@arthurm0000" target=_blank title="This takes you to my discord">
+		<i id="dis" class="fa-brands fa-discord fa-10x"></i>
+		</a>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		<a class="icons" href="https://snapchat.com/t/dwglVYYd" target=_blank title="This takes you to my SnapChat">
+                <i id="snap" class="fa-brands fa-snapchat fa-10x"></i>
+		</a>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		</div>
+		<br>
+		<br>
+		<div align="center">
+		<video id="video" autoplay muted loop playsinline src="main.mp4" height="500">Your browser does not support HTML5 video</video>
+		<br>
+                <br />&nbsp;<br />
+                <br />&nbsp;<br />
+                <br />&nbsp;<br />
+                <br />&nbsp;<br />
+                <br />&nbsp;<br />
+                <br />&nbsp;<br />
+                <br />&nbsp;<br />
+                <br />&nbsp;<br />
+
+
+<!--	      <div id="weather-container" class="weather-box">
+              <h2>Weather in Hawler</h2>
+              <div class="data temp">Loading temperature...</div>
+              <div class="data humidity">Loading humidity...</div>
+              <div class="data wind">Loading wind speed...</div>
+              <div class="data moon-phase">Loading moon phase...</div>
+
+              <script>
+               // Fetch weather information from wttr.in
+               fetch('https://wttr.in/Hawler?format=%t+%h+%w+%M')
+                   .then(response => response.text())
+                   .then(data => {
+                       const [temp, humidity, wind, moonPhase] = data.split(' ');
+                       document.querySelector('.temp').innerText = `Temperature: ${temp}`;
+                       document.querySelector('.humidity').innerText = `Humidity: ${humidity}`;
+                       document.querySelector('.wind').innerText = `Wind Speed: ${wind}`;
+                       document.querySelector('.moon-phase').innerText = `Moon Phase: ${moonPhase}`;
+                   })
+                   .catch(error => {
+                       document.getElementById('weather-container').innerHTML = `<h3>Error fetching data</h3>`;
+                       console.error('Error:', error);
+                   });
+               </script>
+</div>-->
+
+
+<!--                <div id="weather-container" class="weather-box">
+                <h3>Loading...</h3>
+
+                <script>
+                // Fetch weather information from wttr.in
+                fetch('https://wttr.in/Hawler?format=%t+%h+%w+%M')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('weather-container').innerHTML = `<h2>Weather in Hawler</h2><p>${data}</p>`;
+                })
+                .catch(error => {
+                    document.getElementById('weather-container').innerHTML = `<h3>Error fetching data</h3>`;
+                    console.error('Error:', error);
+                });
+                </script>
+</div>-->
+
+	                <br />&nbsp;<br />
+                <br />&nbsp;<br />
+                <br />&nbsp;<br />
+                <br />&nbsp;<br />
+                <br />&nbsp;<br />
+                <br />&nbsp;<br />
+                <br />&nbsp;<br />
+                <br />&nbsp;<br />
+		<footer id="footer">
+  <hr id="hr2">
+  <h1 id="h14">Author: CJ1899</h1>
+
+  <!-- Flexbox container for centering the icon and email -->
+                <a id="mail" href="mailto:carljm1911@gmail.com">
+		<!--<i class="fa-solid fa-envelope fa-5x" style="margin-right: 10px;"></i>-->
+		<img src="images/e-mail.gif">
+                <h1 style="margin: 0;">carljm1911@gmail.com</h1>
+                </a>
+		&nbsp; &nbsp; &nbsp;
+                <img src="images/vim.gif">
+                <img src="images/sendit.gif">
+                <img src="images/learn_html.gif">
+                <img src="images/ieexplode.gif">
+                <img src="images/hicolor.gif">
+                <img src="images/freebsd.gif">
+                <img src="images/facebook.gif">
+                <img src="images/perl.gif">
+                <img src="images/tf.gif">
+                <img src="images/larbs.gif">
+		&nbsp; &nbsp; &nbsp;
+		</footer>
+	</body>
+</html>
