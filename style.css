@@ -527,6 +527,22 @@
     margin-bottom: 20px;
 }
 
+p {
+    margin: 0; /* Remove default margin */
+    padding: 5px 0; /* Add vertical padding for spacing */
+    font-size: larger; /* Adjust the font size */
+}
+
+#siu {
+	color: #89b4FA;
+}
+
+#soft {
+	text-align: center;
+	font-size: 1.4em;
+	color: #6bbe45;
+}
+
 /*@keyframes vi {
 	50%{opacity: 0}
 }
