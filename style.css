@@ -5,7 +5,8 @@
 
 #body {
 	/*background-image: url('images/background.jpg');*/
-	background-image: url('images/5006.png');
+	/*background-image: url('images/5006.png');*/
+	background-color: #1a1a1a;
 	background-position: center;
 	background-attachment: fixed;
 	/*background-size: 260px 260px;*/
@@ -13,18 +14,17 @@
 }
 
 #header {
-	/*background-color: #005577;*/
-        background: linear-gradient(135deg, #000000 0%, #005555 100%);
+        background: linear-gradient(135deg, #023020 0%, #003366 100%);
 	font-family: JetBrainsMono-Italic;
-	border: 3px solid #777777;
-	border-radius: 15px;
-	margin: 10px;
+/*	border: 3px solid #777777;*/
+	border-radius: 0px;
+	margin: 0px;
 }
 
-#welcome {
-        color: #89B4FA;
+.welcome {
+        color: #ff6347;
 	font-size: 24px;
-	text-shadow: 6px 6px 5px #005555 ;
+/*	text-shadow: 6px 6px 5px #005555;*/
 }
 
 #welcome::first-letter {
@@ -87,11 +87,12 @@
 
 #footer {
 	/*background-color: #005577;*/
-        background: linear-gradient(135deg, #005577 0%, #000000 100%);
+        /*background: linear-gradient(135deg, #005577 0%, #000000 100%);*/
+        background: linear-gradient(135deg, #003366 0%, #023020 100%);
 	font-family: JetBrainsMono-Italic;
-	border: 5px outset gray;
-	border-radius: 15px;
-	margin: 20px;
+/*	border: 5px outset gray;*/
+	border-radius: 0px;
+	margin: 5px;
 	text-align: center;
 	position: fixed;
 	bottom: 0;
@@ -122,10 +123,12 @@
 	height: 50px;
 	padding: 15px;
 	text-align: center;
-	background-color: #005544;
-	border: 3px solid #005577;
+	background-color: #2c3e50;
+/*	border: 3px solid #005577;*/
+	transition: background-color 0.3s;
 	margin-left: auto;
 	margin-right: auto;
+	border-radius: 10px;
 	animation-name: pa;
 	animation-duration: 1s;
 }
@@ -142,7 +145,7 @@
 }
 
 .pagination a.active {
-	background-color: #005577;
+	background-color: #ff6347;
 	font-weight: bold;
 	border-radius: 10px;
 }
@@ -280,7 +283,7 @@
 
 /* Title styling */
 .weather-info h2 {
-    color: #fbeaeb;
+    color: #2c3e50;
     font-size: 2.2em;
     margin-bottom: 15px;
 }
@@ -389,13 +392,6 @@
 .links {
 	font-size: 16px;
 	white-space: nowrap;
-}
-
-.loading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
 }
 
 .cd {
