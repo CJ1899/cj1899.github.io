@@ -43,9 +43,6 @@
 		<div align="center"><img src="images/clrline.gif"></div>
 		<div align="center"><img src="images/clrline.gif"></div>
 		<div align="center"><img src="images/clrline.gif"></div>
-		<div align="center"><img src="images/effect.gif"></div>
-		<br>
-		<div align="center"><img src="images/sunset.gif"></div>
 		<br>
     <div id="weather-container" class="weather-box">
     <div class="weather-content">
@@ -79,7 +76,6 @@
     </div>
 
     <script>
-        // Function to fetch and display the local time for Hawler
         function updateTime() {
             const now = new Date();
 
@@ -91,27 +87,20 @@
                 hour12: true,
             };
 
-            // Format the time based on the specified timezone
             const timeString = now.toLocaleTimeString('en-GB', options);
 
-            // Update only the time span, keeping the icon intact
             document.querySelector('.time').innerText = `Time: ${timeString}`;
         }
 
-        // Update the time every second
         setInterval(updateTime, 1000);
 
-        // Call the function once initially to display time immediately
         updateTime();
 
-        // Fetch weather information from wttr.in
         fetch('https://wttr.in/Hawler?format=%t+%h+%w+%M')
             .then(response => response.text())
             .then(data => {
-                // Split data into weather details
                 const [temp, humidity, wind, condition] = data.split(' ');
 
-                // Update the HTML with the weather data
                 document.querySelector('.temp').innerText = `Temperature: ${temp}`;
                 document.querySelector('.humidity').innerText = `Humidity: ${humidity}`;
                 document.querySelector('.wind').innerText = `Wind Speed: ${wind}`;
@@ -123,12 +112,7 @@
             });
     </script>
 </div>
-		<div id="eff">
-		<img src="images/down.gif">
-		<img src="images/rdollar.gif">
-
-
-		</div>
+                <br>
 		<div class="pagination">
 			<a href=""><i class="fa-solid fa-chevron-left"></i></a>
 			<a href="index.html" class="active">1</a>

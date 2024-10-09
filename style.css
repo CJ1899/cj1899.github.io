@@ -6,7 +6,7 @@
 #body {
 	/*background-image: url('images/background.jpg');*/
 	/*background-image: url('images/5006.png');*/
-	background-color: #1a1a1a;
+	background-color: #181818;
 	background-position: center;
 	background-attachment: fixed;
 	/*background-size: 260px 260px;*/
@@ -19,6 +19,14 @@
 /*	border: 3px solid #777777;*/
 	border-radius: 0px;
 	margin: 0px;
+}
+
+a {
+	color: #ff6f61;
+}
+
+a:hover {
+	color #ff9473;
 }
 
 .welcome {
@@ -383,15 +391,15 @@
 	color: #333333
 }
 
-#eff {
+/* {
 	padding: 10px;
 	display: flex;
         justify-content: space-between;
 	align-items: center;
-}
+}*/
 
 .links {
-	color: #89b4fa;
+/*	color: #89b4fa;*/
 	font-size: 16px;
 	white-space: nowrap;
 }
