@@ -474,7 +474,7 @@ s {
 
 .lineofCode {
 	animation: typingEffect 1800ms
-	steps(14, end) forwards 1000ms,
+	steps(20, end) forwards 1000ms,
 	caretAnim 500ms steps(2, end) 0s
 	infinite;
 	overflow: hidden;
