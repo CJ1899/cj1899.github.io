@@ -432,6 +432,101 @@ p {
 	color: #6bbe45;
 }
 
+pre {
+	font-size: 2.0rem;
+	line-height: 2.6rem;
+	margin: 1rem 0 0 1rem;
+	width: fit-content;
+	padding: 2rem;
+/*	background-color: #151718;*/
+	color: #e6cd69;
+	border-radius: 12px;
+/*	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);*/
+}
+
+code {
+	font-weight: 400;
+}
+
+pre {} i, b, u, em, strong {
+	text-decoration: none;
+	font-weight: 400;
+	font-style: normal;
+	color: #55b5db;
+}
+
+em {
+	color: #a074c4;
+}
+
+strong {
+	color: #9fca56;
+}
+
+u {
+	color: #eeeeee
+}
+
+s {
+	color: #666666;
+        text-decoration: none;
+}
+
+.lineofCode {
+	animation: typingEffect 1800ms
+	steps(14, end) forwards 1000ms,
+	caretAnim 500ms steps(2, end) 0s
+	infinite;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	width: 0;
+	height: auto;
+	border-right: 2px solid #ffffff;
+}
+
+.lineofCode:nth-of-type(2) {
+	height: 0;
+	animation-delay: 3100ms;
+}
+
+.lineofCode:nth-of-type(3) {
+	height: 0;
+	animation-delay: 5200ms;
+}
+
+@keyframes typingEffect {
+	0% {
+		border-width: 2px;
+	}
+	5% {
+		width: 0;
+		height: auto;
+		border-width: 2px;
+	}
+	93% {
+		border-width: 2px;
+	}
+	100% {
+		width: 14ch;
+		height: auto;
+		border-width: 0;
+	}
+}
+
+@keyframes caretAnim {
+	0% {
+		border-color: transparent;
+	}
+	50% {
+		border-color: #ffffff;
+	}
+	100% {
+		border-color: transparent;
+	}
+}
+
+
 /*@keyframes vi {
 	50%{opacity: 0}
 }
