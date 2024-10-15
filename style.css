@@ -352,7 +352,8 @@ a:hover {
 }
 
 .weather-box .temp {
-    color: #ffeb3b;
+    /*color: #ffeb3b;*/
+    color: #00ffbf;
 }
 
 .weather-box .humidity {
@@ -461,7 +462,8 @@ em {
 }
 
 strong {
-	color: #9fca56;
+	/*color: #9fca56;*/
+	color: #00ff80;
 }
 
 u {
