@@ -498,6 +498,15 @@ s {
 	animation-delay: 5200ms;
 }
 
+
+.eagler {
+	color: #d3889b;
+}
+
+.mcserv {
+	color: #d3889b;
+}
+
 @keyframes typingEffect {
 	0% {
 		border-width: 2px;
